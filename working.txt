@@ -1,0 +1,19 @@
+http://localhost/mywebsite/mywebsite.html : Search this on edge/chrome.
+This will take user to the login page. mywebsite.html file will be in action.
+There is a signup option for new users which will redirect them to http://localhost/mywebsite/signup.html. signup.html will be in action.
+When user clicks on login button, if the credentials matches , he will be redirected to http://localhost/mywebsite/incontrol.php. mainpage.html.php will be in action. Otherwise it will show and error 'Wrong UserID or Password'.
+
+Now mainpage.html.php is in action which is the home page of the blogging website. Here user can see the past blogs uploaded and react to them.
+Now he has six options in the header.
+
+Home button that will redirect to http://localhost/mywebsite/incontrol.php which is the home page of website.
+
+About button that will redirect to http://localhost/mywebsite/aboutmainpage.html. aboutmainpage.html will be in action. there is a 'back' button which will redirect user to the home page.
+
+Create Post button that will redirect to http://localhost/mywebsite/createpost.html. createpost.html will be in action. There user can create the post by adding title and discription. He will be redirected t ohome page after his work is done.
+
+Profile button that will redirect to http://localhost/mywebsite/profile.html. profile.html will be in action. THere user can update their credentials. In header there are 3 options : home , about, contact.
+
+Contact button that will redirect to http://localhost/mywebsite/contact.html. contact.html will be in action. User need to fill the details in order to contact the owner of website.
+
+Logout button that will redirect user to http://localhost/mywebsite/mywebsite.html. User will get logged out. This will take user to the login page. mywebsite.html file will be in action.
