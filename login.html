@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Blogging Website</title>
+  </head>
+  <body>
+    <h1>Welcome to My Blogging Website</h1>
+    <div>
+      <button id="new-post-btn">New Post</button>
+    </div>
+    <hr>
+    <div>
+      <h2>Recent Posts</h2>
+      <ul>
+        <li>
+          <h3>Post Title 1</h3>
+          <p>Post content goes here.</p>
+          <button class="like-btn">Like</button>
+          <button class="share-btn">Share</button>
+          <button class="comment-btn">Comment</button>
+        </li>
+        <li>
+          <h3>Post Title 2</h3>
+          <p>Post content goes here.</p>
+          <button class="like-btn">Like</button>
+          <button class="share-btn">Share</button>
+          <button class="comment-btn">Comment</button>
+        </li>
+        <!-- Add more posts here -->
+      </ul>
+    </div>
+    <hr>
+    <div>
+      <a href="#">Logout</a>
+    </div>
+    
+    <div id="new-post-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create a New Post</h2>
+        <form>
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title"><br>
+          <label for="content">Content:</label><br>
+          <textarea id="content" name="content"></textarea><br>
+          <input type="submit" value="Create">
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("new-post-modal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("new-post-btn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      // Add event listeners to the like, share, and comment buttons
+      var likeButtons = document.getElementsByClassName("like-btn");
+      var shareButtons = document.getElementsByClassName("share-btn");
+      var commentButtons = document.getElementsByClassName("comment-btn");
+
+      for (var i = 0; i < likeButtons.length; i++) {
+        likeButtons[i].addEventListener("click", function() {
+          console.log("Like button clicked");
+        });
+      }
+
+      for (var i = 0; i < shareButtons.length; i++) {
+        shareButtons[i].addEventListener("click", function() {
+          console.log("Share button clicked");
+        });
+      }
+
+      for (var i = 0; i < commentButtons.length; i++) {
+        commentButtons[i].addEventListener("click", function() {
+          console.log("Comment button clicked");
+        });
+      }
+    </script>

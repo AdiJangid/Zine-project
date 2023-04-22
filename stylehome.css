@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+      background-color: #151f15c0;
+      background-image: url('https://images.pexels.com/photos/3178786/pexels-photo-3178786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: 100vh;
+  }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #00000080;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+nav li {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #0707077c;
+  color: #ffffff;
+}
+
+main {
+  padding-top: 60px;
+  margin: 0 auto;
+  max-width: 900px;
+  color: #ffffff;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+
+.post {
+  width: calc(100% / 3 - 10px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  background-color: #00000083;
+  color: #ffffff;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  color: #ffffff;
+}
+
+.post-details {
+  padding: 10px;
+  color: #ffffff;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.post-header img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.post-author {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #8fbea4;
+}
+
+.post-description {
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.post-actions button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.post-actions button i {
+  margin-right: 5px;
+}
+
+.post-actions button:hover {
+  background-color: #223a2cc5;
+}

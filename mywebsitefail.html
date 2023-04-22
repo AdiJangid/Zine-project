@@ -1,0 +1,71 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  // Get the username and password from the form
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Check if the username and password are valid
+  if ($username == 'admin' && $password == 'password123') {
+    // Set the session variable
+    $_SESSION['username'] = $username;
+
+    // Redirect to the home page
+    header('Location: home.php');
+    exit;
+  } else {
+    // Show an error message
+    $error = 'Invalid username or password';
+  }
+}
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <label>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ff7a51ff-31c4-49c1-a7bd-a1e6cb927f28/dbze012-ce22378e-097a-45cb-8f2a-05c11dbd82ce.png/v1/fill/w_894,h_894,q_75,strp/11_9_16_regify_futuristic_v__1__by_zookuzero-dbze012.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwib2JqIjpbW3sicGF0aCI6Ii9mL2ZmN2E1MWZmLTMxYzQtNDljMS1hN2JkLWExZTZjYjkyN2YyOC9kYnplMDEyLWNlMjIzNzhlLTA5N2EtNDVjYi04ZjJhLTA1YzExZGJkODJjZS5wbmciLCJ3aWR0aCI6Ijw9ODk0IiwiaGVpZ2h0IjoiPD04OTQifV1dLCJ3bWsiOnsicGF0aCI6Ii93bS9mZjdhNTFmZi0zMWM0LTQ5YzEtYTdiZC1hMWU2Y2I5MjdmMjgvem9va3V6ZXJvLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.BD5WpFK82KqVxwYM0nGDdFMn_tsux5tGjOYqFJ8f74A" alt="Logo" class="logo"  label for="Hello" ><b>The Revolution </b></label>
+        
+        <ul>
+          <li><a href="mywebsite.html">Home</a></li>
+          <li><a href="mainpage.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Login</h1>
+      <?php if (isset($error)) { ?>
+        <p><?php echo $error; ?></p>
+      <?php } ?>
+      <form action="incontrol.php" method="post">
+        <label for="username" >Username:</label>
+        <input type="text" id="username" name="user" required style="background-color: #0000006c; color: #ffffff;">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="pass" required style="background-color: #0000006c; color: #ffffff;">
+        <button type="submit" >Login</button>
+        <h6 class="warn">Wrong Username or Password</h6>
+      </form>
+      <script>
+        // Redirect to home page on successful login
+        if (window.location.search.includes("login=success")) {
+          alert("Login successful!");
+          window.location.href = "mainpage.html";
+        }
+      </script>
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+    <footer>
+      <p>&copy; 2023 My Blogging Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

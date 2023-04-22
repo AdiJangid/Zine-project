@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Sign Up">
+    </form>
+
+    <script>
+      // Check if user is already logged in
+      if (localStorage.getItem('isLoggedIn')) {
+        // Redirect to login page
+        window.location.href = 'login.html';
+      }
+
+      // Add event listener for form submission
+      document.getElementById('signup-form').addEventListener('submit', function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Get form values
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Save user information to local storage
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        localStorage.setItem('isLoggedIn', true);
+
+        // Redirect to login page
+        window.location.href = 'login.html';
+      });
+    </script>
+  </body>
+</html>

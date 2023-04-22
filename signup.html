@@ -1,0 +1,86 @@
+<!-- <?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  // Get the username and password from the form
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Open the user database file
+  $user_file = fopen('users.txt', 'a+') or die('Unable to open user database file!');
+
+  // Check if the username already exists in the database
+  $username_exists = false;
+  while (($line = fgets($user_file)) !== false) {
+    $line = trim($line);
+    $line_parts = explode(':', $line);
+    if ($line_parts[0] == $username) {
+      $username_exists = true;
+      break;
+    }
+  }
+
+  // If the username already exists, show an error message
+  if ($username_exists) {
+    $error = 'Username already exists!';
+  }
+  // Otherwise, store the new user data in the database and redirect to the login page
+  else {
+    fwrite($user_file, "$username:$password\n");
+    fclose($user_file);
+
+    $_SESSION['username'] = $username;
+
+    header('Location: login.php');
+    exit;
+  }
+}
+?> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+
+        h1 {
+			position: absolute;
+			top: 250px;
+			left: 50px;
+            color: #000000;
+		}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <label>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ff7a51ff-31c4-49c1-a7bd-a1e6cb927f28/dbze012-ce22378e-097a-45cb-8f2a-05c11dbd82ce.png/v1/fill/w_894,h_894,q_75,strp/11_9_16_regify_futuristic_v__1__by_zookuzero-dbze012.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwib2JqIjpbW3sicGF0aCI6Ii9mL2ZmN2E1MWZmLTMxYzQtNDljMS1hN2JkLWExZTZjYjkyN2YyOC9kYnplMDEyLWNlMjIzNzhlLTA5N2EtNDVjYi04ZjJhLTA1YzExZGJkODJjZS5wbmciLCJ3aWR0aCI6Ijw9ODk0IiwiaGVpZ2h0IjoiPD04OTQifV1dLCJ3bWsiOnsicGF0aCI6Ii93bS9mZjdhNTFmZi0zMWM0LTQ5YzEtYTdiZC1hMWU2Y2I5MjdmMjgvem9va3V6ZXJvLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.BD5WpFK82KqVxwYM0nGDdFMn_tsux5tGjOYqFJ8f74A" alt="Logo" class="logo"  label for="Hello" ><b>The Revolution </b></label>
+    <h1 >Sign Up</h1>
+    <?php if (isset($error)) { ?>
+      <p><?php echo $error; ?></p>
+    <?php } ?>
+    <form action="control.php" method="post">
+    
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="user"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="signup">
+      </form>
+      <?php
+      // Check if the form was submitted
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Redirect to the login page
+        header('Location: mywebsite.html');
+        exit;
+      }
+    ?>
+    <p>Already have an account? <a href="mywebsite.html">Login</a></p>
+  </body>
+</html>

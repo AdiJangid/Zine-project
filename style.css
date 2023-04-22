@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #151f15c0;
+    background-image: url('https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100vh;
+    }
+  
+    /* Center the container div on the page */
+.container {
+margin: auto;
+max-width: 500px;
+padding: 20px;
+background-color: rgba(240, 240, 240, 0.137);
+border-radius: 5px;
+box-shadow: 0px 0px 10px rgb(49, 49, 49);
+}
+
+/* Style the headings */
+h1 {
+text-align: center;
+color: #ffffff;
+-webkit-text-stroke: 5px #00000044;
+}
+
+/* Style the labels */
+label {
+display: block;
+margin-bottom: 10px;
+font-size: 30px;
+color: #ffffff;
+-webkit-text-stroke: 1px #000000;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="password"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: 1px solid #fdf7f77a;
+border-radius: 4px;
+box-sizing: border-box;
+-webkit-text-stroke: 1px #00000044;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+background-color: #283628;
+color: rgba(255, 255, 255, 0.397);
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+color: #ffffff8a;
+}
+
+button[type="submit"]:hover {
+background-color: #283829;
+
+}
+
+/* Style the header */
+header {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 200px;
+background-size: cover;
+background-position: center;
+color: #ffffff;
+
+}
+/* Style the logo and site title */
+.logo-container {
+display: flex;
+align-items: center;
+margin: 20px;
+background-color: rgba(248, 248, 248, 0.7);
+padding: 10px;
+border-radius: 10px;
+-webkit-text-stroke: 5px #00000044;
+}
+
+.logo {
+width: 100px;
+height: 100px;
+object-fit: contain;
+margin-right: 10px;
+}
+
+.site-title {
+font-size: 24px;
+font-weight: 600;
+color: #ffffff;
+}
+
+/* Style the navigation menu */
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+
+}
+
+nav li {
+float: left;
+}
+
+nav li a {
+display: block;
+color: rgb(255, 255, 255);
+background-color: #00000054;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+nav li a:hover {
+background-color: #00000054;;
+}
+
+/* Style the footer */
+footer {
+background-color: #00000000;;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 10px;
+} 
+ /* Add hover effect to form inputs */
+input[type="text"]:hover,
+input[type="password"]:hover {
+background-color: #0202021f;
+}
+
+/* Add hover effect to submit button */
+button[type="submit"]:hover {
+background: linear-gradient(180deg, #253a2da6 0%, #2b4b3796 50%, #263d2ab9 100%);
+color: #ffffff00;
+text-shadow: 0px 0px 10px #000000;
+cursor: pointer;
+}
+
+/* Add hover effect to navigation links */
+nav li a:hover {
+background-color: #2b3d2b9c;
+color: #ffffff;
+}
+
+/* Add hover effect to footer links */
+footer a:hover {
+text-decoration: underline;
+color: #41376d;
+background-color: #000000;
+} 
+.warning{
+    color:red;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<style>
+        	body {
+		    font-family: Arial, sans-serif;
+            background-color: #151f15c0;
+            background-image: url('https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 100vh;
+		    }
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #0000006c;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 0;
+			color: #ffffff;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+            color: #ffffff;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: #ffffff;
+		}
+		input[type=text], input[type=email], textarea {
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			resize: none;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			width: 100%;
+            color: rgb(0, 0, 0);
+		}
+		textarea {
+			height: 150px;
+		}
+		input[type=submit] {
+			background-color: #666666;
+			color: #ffffff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+		input[type=submit]:hover {
+			background-color: #00000085;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Contact Us</h1>
+		<form method="post" action="contact.php">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required style="background-color: #0000006c; color: #ffffff;">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required style="background-color: #0000006c; color: #ffffff;">
+			<label for="subject">Subject:</label>
+			<input type="text" id="subject" name="subject" required style="background-color: #0000006c; color: #ffffff;">
+			<label for="message">Message: </label>
+			<textarea id="message" name="body" required style="background-color: #0000006c; color: #ffffff;"></textarea>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

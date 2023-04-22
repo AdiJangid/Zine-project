@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Post</title>
+	<style>
+        	body {
+		    font-family: Arial, sans-serif;
+            background-color: #151f15c0;
+            background-image: url('https://images.pexels.com/photos/760645/pexels-photo-760645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: 100vh;
+		    }
+            /* Style the labels */
+            label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #ffffff;
+            -webkit-text-stroke: 1px #000000;
+            }
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			margin-top: 50px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 50%;
+			margin: 0 auto;
+		}
+
+		input[type=text], textarea {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+
+		button {
+			background-color: #325532dc;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #121a127a;
+		}
+	</style>
+</head>
+<body>
+	<form action="postin.php" method="post">
+		<label for="title">Title:</label>
+		<input type="text" id="title" name="title" placeholder="Enter title" style="background-color: #0000006c; color: #ffffff;">
+
+		<label for="body">Body:</label>
+		<textarea id="body" name="content" placeholder="Enter post content" rows="10" style="background-color: #0000006c; color: #ffffff;"></textarea>
+
+		<button type="submit">Create Post</button>
+	</form>
+</body>
+</html>
